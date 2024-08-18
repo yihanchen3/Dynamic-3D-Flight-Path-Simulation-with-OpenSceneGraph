@@ -1,0 +1,16 @@
+ 
+osg/bin/
+
+osg/include/
+
+osg/lib/
+
+.vs/
+
+out/build/x64-Debug/.cmake/
+
+out/build/x64-Debug/CMakeFiles/
+
+out/build/x64-Debug/Testing/
+
+out/build/x64-Debug/
