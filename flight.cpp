@@ -186,7 +186,10 @@ void createAndPlaceModel(const std::string& modelPath, const std::vector<osg::Ve
 
 int main()
 {
-	string filename = "../../../keypoint.txt";  // Replace with your actual filename
+	// Code running location: ${ProjectDir}\out\build\x64-Debug
+	string default_path = "../../../materials/";
+
+	string filename =  default_path + "keypoint.txt";  // Replace with your actual filename
 	ifstream file(filename);
 	string line;
 	vector<vector<double>> pos0;
@@ -216,9 +219,9 @@ int main()
 	osg::ref_ptr<osg::Group> root = new osg::Group();
 
 	// default path: ${ProjectDir}\out\build\x64-Debug
-	string default_path = "../../../materials/";
+	string model_path = default_path + "model/";
 
-	osg::ref_ptr<osg::Node> helicopter = osgDB::readNodeFile(default_path + "helicopter2.3ds");	// Read the helicopter model
+	osg::ref_ptr<osg::Node> helicopter = osgDB::readNodeFile(model_path + "helicopter2.3ds");	// Read the helicopter model
 	helicopter->getOrCreateStateSet()->setMode(GL_RESCALE_NORMAL, osg::StateAttribute::ON);
 
 	// Get the bounding box to determine the rotation center of the animation
@@ -263,7 +266,7 @@ int main()
 	
 	// Import and place Transimission Tower models (1-5)
 
-	string towerModelPath = default_path + "TransmissionTower.3ds";
+	string towerModelPath = model_path + "TransmissionTower.3ds";
 	vector<osg::Vec3> towerPositions = {
 		osg::Vec3(20, 65, -1),
 		osg::Vec3(20, 75, -1),
@@ -275,7 +278,7 @@ int main()
 
 	// Import and place Tree models (1-18)
 
-	string treeModelPath = default_path + "tree.3ds";
+	string treeModelPath = model_path + "tree.3ds";
 
 	// Tree positions extracted from the original snippet
 	vector<osg::Vec3> treePositions = {
@@ -301,7 +304,7 @@ int main()
 	createAndPlaceModel(treeModelPath, treePositions, root.get(), 0.012, osg::Quat());
 
 	
-	string aptModelPath = default_path + "apartment.3ds";
+	string aptModelPath = model_path + "apartment.3ds";
 
 	// High-rise positions extracted from the original snippet
 	vector<osg::Vec3> aptPositions = {
@@ -322,7 +325,7 @@ int main()
 
 
 
-	string lowriseModelPath = default_path + "lowrise.3ds";
+	string lowriseModelPath = model_path + "lowrise.3ds";
 	// Low-rise positions extracted from the original snippet
 	vector<osg::Vec3> lowrisePositions = {
 		osg::Vec3(80, 70, -3),

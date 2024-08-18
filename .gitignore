@@ -1,9 +1,15 @@
- 
 osg/bin/
+
+!osg/bin/.gitkeep
 
 osg/include/
 
+!osg/include/.gitkeep
+
+
 osg/lib/
+
+!osg/lib/.gitkeep
 
 .vs/
 
@@ -14,3 +20,5 @@ out/build/x64-Debug/CMakeFiles/
 out/build/x64-Debug/Testing/
 
 out/build/x64-Debug/
+
+!out/build/x64-Debug/.gitkeep
