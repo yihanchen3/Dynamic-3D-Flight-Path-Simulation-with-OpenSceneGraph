@@ -1,4 +1,4 @@
-# **Dynamic 3D Flight Path Simulation with OpenSceneGraph**
+# **OSG-based Aircraft Cruise Simulation**
 
 This project is a flight animation simulator using OpenSceneGraph (OSG) to render 3D models and animate them along predefined paths. The simulator creates a scene with various 3D objects, including aircrafts, trees, buildings, and power towers, and animates an aircraft model through this environment performing obstacle-avoiding cruise based on a calculated set of key points.
 
